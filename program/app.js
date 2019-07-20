@@ -9,6 +9,12 @@ new Vue({
     methods:{
         helloBoy:function(time){
             return "hello "+time+" "+this.name;
+        },
+        addAge:function(step){
+            this.age+=step;
+        },
+        substactAge:function(step){
+            this.age-=step;
         }
     }
 })

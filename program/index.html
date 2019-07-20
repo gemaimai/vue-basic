@@ -17,6 +17,10 @@
         <p>{{helloBoy(" vue")}}</p>
         <a v-bind:href="website">ThreeG</a>
         <p v-html="newTager"></p>
+        <div>
+            <input type="button" value="增加一年" v-on:click="addAge(1)"> 
+            <input type="button" value="减少一年" v-on:click="substactAge(1)">           
+        </div>
     </div>
 
     <script src="app.js"></script>
