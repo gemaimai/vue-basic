@@ -4,7 +4,9 @@ new Vue({
         name:"ThreeG",
         age:30,
         website:"http://threeg.com",
-        newTager:"<p>new Tag by v-html</p>"
+        newTager:"<p>new Tag by v-html</p>",
+        x:0,
+        y:0
     },
     methods:{
         helloBoy:function(time){
@@ -15,6 +17,11 @@ new Vue({
         },
         substactAge:function(step){
             this.age-=step;
+        },
+        updateXY:function(event){
+            this.x=event.offsetX;
+            this.y=event.offsetY;
         }
+
     }
 })

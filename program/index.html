@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>vue.js load CDN</title>
+    <link rel="stylesheet" href="style.css">
     <script src="https://unpkg.com/vue"></script>
 </head>
 
@@ -21,12 +22,12 @@
             <input type="button" value="增加一年" v-on:click="addAge(1)"> 
             <input type="button" value="减少一年" v-on:click="substactAge(1)">           
         </div>
+        <div id="div1" v-on:mousemove="updateXY">
+            {{x}}-{{y}}
+        </div>
     </div>
 
-    <script src="app.js"></script>
-    <script>
-        var oDiv = document.getElementsByTagName
-    </script>
+    <script src="app.js"></script>    
 </body>
 
 </html>
