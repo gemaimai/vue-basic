@@ -25,6 +25,9 @@ new Vue({
         stopMoving:function(event){
              event.stopPropagation();
              event.stopPropagation();
+        },
+        stopFN:function(){
+            
         }
     }
 })
