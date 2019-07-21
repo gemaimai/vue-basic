@@ -2,10 +2,15 @@ var count=0;
 new Vue({
     el:"#app",
     data:{
-        isShow:false,
-        isShowElse:false,
-        isShowElseIf:false,
-        isShow_v:false
+        items:["marcy","tery","kobe","oneo"],
+        users:[{
+                name:"marcy",
+                age:40
+            },{
+                name:"tery",
+                age:30
+            }
+        ]
     },
     methods:{
        

@@ -5,41 +5,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>第十一章:指令v-if & v-show </title>
+    <title>第十二章:指令v-for </title>
     <link rel="stylesheet" href="style.css">
     <script src="https://unpkg.com/vue"></script>
 </head>
 
 <body>
     <div id="app">
-        <button  v-on:click="isShow=!isShow">Togger isShow</button>
-        <button  v-on:click="isShowElse=!isShowElse">Toggler isShowElse</button>
-       <div v-if="isShow">v-if</div>
-       <div v-esle-if="isShowElseIf">v-if</div>
-       <div v-else="isShowElse">v-else</div>
-       <div v-show="isShow_v"></div>
+        <ul>
+            <li>展示v-for</li>
+            <li v-for=" i in items">
+                {{i}}
+            </li>
+        </ul>
+        <div>
+            <p>展示template</p>
+            <div v-for="u in users">
+                <p>{{u.name}}</p>
+                <p>{{u.age}}</p>
+            </div>
+            <template v-for="u in users">
+                    <p>{{u.name}}</p>
+                    <p>{{u.age}}</p>
+            </template>
+        </div>
+        <div>
+            <p>v-for 获取item的格式</p>
+            <template v-for="(u,index) in users">
+                    <p>{{u.name}}</p>
+                    <p>{{u.age}}</p>
+            </template>
+        </div>
     </div>
     <div>
             <p>
-                    第十一章:指令v-if & v-show
-            </p>
-            v-if vs v-show
-            v-if 是“真正”的条件渲染，因为它会确保在切换过程中条件块内的事件监听器和子组件适当地被销毁和重建。
-            
-            v-if 也是惰性的：如果在初始渲染时条件为假，则什么也不做——直到条件第一次变为真时，才会开始渲染条件块。
-            
-            相比之下，v-show 就简单得多——不管初始条件是什么，元素总是会被渲染，并且只是简单地基于 CSS 进行切换。
-            
-            一般来说，v-if 有更高的切换开销，而 v-show 有更高的初始渲染开销。因此，如果需要非常频繁地切换，则使用 v-show 较好；如果在运行时条件很少改变，则使用 v-if 较好。
-            <p>
-                    1, v-if
-                    2, v-else
-                    3, v-else-if  
+                    第十二章:指令v-if & v-show
             </p>
             <p>
-                  
+                   v-for  循环渲染DOM
             </p>
             <p>
+                  templete 配合v-for 但是不输出本身
+            </p>
+            <p>
+                    "(u,index) in users" 
+            </p>
+            <p>
+                
             </p>
         </div>
     <script src="app.js"></script>    
