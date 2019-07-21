@@ -22,11 +22,13 @@
             <input type="button" value="增加一年" v-on:click="addAge(1)"> 
             <input type="button" value="减少一年" v-on:click="substactAge(1)">           
         </div>
-        <div id="div1" v-on:mousemove="updateXY">
+        <div id="div1" v-on:mousemove.self="updateXY">
             {{x}}-{{y}}
+            <span v-on:mousemove="stopMoving">Stop moving by stopPropagation() </span>
+            <span v-on:mousemove.stop="">Stop moving by vue stop</span>
+            <span >Stop moving by vue self</span>
         </div>
     </div>
-
     <script src="app.js"></script>    
 </body>
 

@@ -1,5 +1,7 @@
 #div1{
-    width: 300px;
-    height: 300px;
+    width: 600px;  
+    padding: 200px 20px;
     background-color:bisque;
+    text-align: center;
+    border:1px solid #333;
 }
