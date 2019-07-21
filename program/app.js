@@ -2,20 +2,24 @@ var count=0;
 new Vue({
     el:"#app",
     data:{
-        items:["marcy","tery","kobe","oneo"],
-        users:[{
-                name:"marcy",
-                age:40
-            },{
-                name:"tery",
-                age:30
-            }
-        ]
+        HP:100,
+        ended:false
     },
     methods:{
-       
+        impact:function(){
+            this.HP-=10;
+            if(this.HP<=0){
+                this.ended=true;
+            }
+        },
+        reset:function(){
+            this.HP=100;
+            this.ended=false;
+        }
     },
     computed:{
-       
+        getClass:function(){
+
+        }
     }
 })

@@ -5,55 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>第十二章:指令v-for </title>
+    <title>第十三章:案例 打破沙袋 </title>
     <link rel="stylesheet" href="style.css">
     <script src="https://unpkg.com/vue"></script>
 </head>
 
 <body>
     <div id="app">
-        <ul>
-            <li>展示v-for</li>
-            <li v-for=" i in items">
-                {{i}}
-            </li>
-        </ul>
-        <div>
-            <p>展示template</p>
-            <div v-for="u in users">
-                <p>{{u.name}}</p>
-                <p>{{u.age}}</p>
-            </div>
-            <template v-for="u in users">
-                    <p>{{u.name}}</p>
-                    <p>{{u.age}}</p>
-            </template>
-        </div>
-        <div>
-            <p>v-for 获取item的格式</p>
-            <template v-for="(u,index) in users">
-                    <p>{{u.name}}</p>
-                    <p>{{u.age}}</p>
-            </template>
-        </div>
+    <div v-bind:class="{contianer:true,contianerend:ended}">           
+       </div> 
+       <div class="hpdiv">
+            <div v-bind:style="{width:HP+'%'}"></div>
+        </div>      
+       <div class="controls">
+           <button v-on:click="impact">impact</button>
+           <button v-on:click="reset">impact</button>
+       </div>
     </div>
-    <div>
-            <p>
-                    第十二章:指令v-if & v-show
-            </p>
-            <p>
-                   v-for  循环渲染DOM
-            </p>
-            <p>
-                  templete 配合v-for 但是不输出本身
-            </p>
-            <p>
-                    "(u,index) in users" 
-            </p>
-            <p>
-                
-            </p>
-        </div>
+   
     <script src="app.js"></script>    
 </body>
 
