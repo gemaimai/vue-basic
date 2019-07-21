@@ -5,33 +5,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>第十章:动态改变CSS</title>
+    <title>第十一章:指令v-if & v-show </title>
     <link rel="stylesheet" href="style.css">
     <script src="https://unpkg.com/vue"></script>
 </head>
 
 <body>
-    <div id="app">  
-       <h1>动态改变CSS</h1>
-       <h2>示例1</h2>
-       <div v-on:click="changeColorFn" v-bind:class="{changeColor:changeColor}">
-           <span>herry</span>
-       </div>
-       <h2 v-bind:class="{red:false,blue:true}">示例2</h2>
-       <div v-on:click="changeColorFn" v-bind:class="getClassList">
-            <span>herry</span>
-        </div>
+    <div id="app">
+        <button  v-on:click="isShow=!isShow">Togger isShow</button>
+        <button  v-on:click="isShowElse=!isShowElse">Toggler isShowElse</button>
+       <div v-if="isShow">v-if</div>
+       <div v-esle-if="isShowElseIf">v-if</div>
+       <div v-else="isShowElse">v-else</div>
+       <div v-show="isShow_v"></div>
     </div>
     <div>
             <p>
-                    第十章:动态绑定CSS
+                    第十一章:指令v-if & v-show
             </p>
-                1, 设置CSS 格式为:v-bind:class="{className:isEnable,className2:isEnable}" ;""中存放{}对象,value为true时属性名为可用classname
+            v-if vs v-show
+            v-if 是“真正”的条件渲染，因为它会确保在切换过程中条件块内的事件监听器和子组件适当地被销毁和重建。
+            
+            v-if 也是惰性的：如果在初始渲染时条件为假，则什么也不做——直到条件第一次变为真时，才会开始渲染条件块。
+            
+            相比之下，v-show 就简单得多——不管初始条件是什么，元素总是会被渲染，并且只是简单地基于 CSS 进行切换。
+            
+            一般来说，v-if 有更高的切换开销，而 v-show 有更高的初始渲染开销。因此，如果需要非常频繁地切换，则使用 v-show 较好；如果在运行时条件很少改变，则使用 v-if 较好。
             <p>
-                    2,  通过修改class的属性值,控制class的启用;
+                    1, v-if
+                    2, v-else
+                    3, v-else-if  
             </p>
             <p>
-                    3,	通过计算属性,直接返回一个class对象,
+                  
             </p>
             <p>
             </p>
