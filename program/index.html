@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>双向绑定</title>
+    <title>第九章:计算属性</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://unpkg.com/vue"></script>
 </head>
@@ -25,9 +25,26 @@
         <div>
                 <span>姓名:</span><input ref="name" type="text" v-on:keyup="logName"><p></p>
                 <span>年龄:</span><input type="text" v-on:keyup="logAge"> 
-                <span>籍贯:</span><input type="text" v-model="address">               
+                <span>籍贯:</span><input type="text" v-model="address"> 
+                <p>
+                    {{getAge}}
+                    {{getName}}
+                </p>              
         </div>
-
+        <div>
+            <p>
+                    第九章:计算属性
+            </p>
+            <p>
+                    1, 队友Methods 中的函数,如果涉及到了修改DOM 元素的属性,不管有没有变化,其中一个函数,一个属性的变化.虚拟DOM重载时,都会触发该函数.检测是否需要修改DOM.
+            </p>
+            <p>
+                    2,computed 计算属性;当涉及到通过计算修改DOM时,只会运行相关变更的函数,其他函数不会被触发!
+            </p>
+            <p>
+                    理解为:computed缓存的是执行结果,除非他依赖的条件变化,才会重新触发执行获取新的结果.而,函数methods,不缓存结果,所以只要涉及到虚拟DOM的重构,函数都会执行,分析结果是否要渲染页面.
+            </p>
+        </div>
     </div>
     <script src="app.js"></script>    
 </body>
