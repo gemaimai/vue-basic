@@ -1,19 +1,22 @@
-var vm=new Vue({
-    el:"#app_1",
-    data:{
-        name_1:"vue model 1"        
+Vue.component("newtag",{
+    data:function(){
+        return {
+            name:"TG",
+            count:0
+        }
     },
+    template:"<p v-on:click='impact'>this is new tag for component template! auther:{{name}}{{count}}</p>",
     methods:{
-       
-    },
-    computed:{
-       
+        impact:function(){
+            this.count++;
+        }
     }
 })
 
-var vm_2=new Vue({
-    el:"#app_2",
-    data:{
-        name_2:"vue demo 2"
-    }
+new Vue({
+    el:"#app_1"    
+})
+
+new Vue({
+    el:"#app_2"
 })
