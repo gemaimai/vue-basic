@@ -1,25 +1,19 @@
-var count=0;
-new Vue({
-    el:"#app",
+var vm=new Vue({
+    el:"#app_1",
     data:{
-        HP:100,
-        ended:false
+        name_1:"vue model 1"        
     },
     methods:{
-        impact:function(){
-            this.HP-=10;
-            if(this.HP<=0){
-                this.ended=true;
-            }
-        },
-        reset:function(){
-            this.HP=100;
-            this.ended=false;
-        }
+       
     },
     computed:{
-        getClass:function(){
+       
+    }
+})
 
-        }
+var vm_2=new Vue({
+    el:"#app_2",
+    data:{
+        name_2:"vue demo 2"
     }
 })

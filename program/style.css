@@ -1,28 +1,5 @@
-.contianer{
+div{
     margin: 0 auto;
-    width: 200px;
-    height: 500px;
-    background: url(img/bag.png) center no-repeat; 
-}
-.contianerend{
-    margin: 0 auto;
-    width: 200px;
-    height: 500px;
-    background: url(img/bag-burst.png) center no-repeat; 
-}
-.hpdiv{
-    margin: auto;
-    background: #85851b;
-    width: 300px;
-    height:30px;
-    border: solid 2px black;
-}
-.hpdiv div{
-    background: red;
-    height: 30px;
-}
-.controls{
-    margin: 0 auto;
-    width: 200px;
-    text-align: center;
+    padding:100px;
+    background: #333;
 }
